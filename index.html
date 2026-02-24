@@ -12,36 +12,39 @@
 
     <h1 class="text-3xl">lista de Produtos</h1>
 
-    <div>
-        <input type="text" 
-            class="border rounded-md px-4 py-2 gap-2"
+    <div class="flex gap-x-4"> 
+        <input type="text" placeholder="digite o produto"
+            class="border rounded-md px-4 py-2 "
             id="produto"
         >
 
-        <input type="text" 
-            class="border rounded-md px-4 py-2 w-20 gap-2 "
+        <input type="text" placeholder="Valor"
+            class="border rounded-md px-4 py-2 w-20 "
             id="valor"
         >
 
-        <input type="text" 
-            class="border rounded-md px-4 py-2 w-20"
+        <input type="text" placeholder="Qtd"
+            class="border rounded-md px-4 py-2 w-16"
             id="quantidade"
         >
+
+        <button class="bg-blue-500 text-white px-4 py-2 rounded "
+        onclick="adicionarProduto()"
+        >
+            adicionar
+        </button>
 
     </div>
 
     
 
-    <button class="bg-blue-500 text-white px-4 py-2 rounded "
-        onclick="adicionarProduto()"
-    >
-    
-        adicionar
-    </button>
+
     <div
         id="lista"
         class="flex flex-col gap-2"
-    ></div>
+    >
+
+    </div>
 
 
 </body>
