@@ -8,46 +8,61 @@
 
     <title>Document</title>
 </head>
-<body class="bg-gray-500 flex flex-col items-center justify-center h-screen gap-4">
+<body class="bg-[#0f172a] text-white flex items-center justify-center min-h-screen">
 
-    <h1 class="text-3xl">lista de Produtos</h1>
-
-    <div class="flex gap-x-4"> 
-        <input type="text" placeholder="digite o produto"
-            class="border rounded-md px-4 py-2 "
-            id="produto"
-        >
-
-        <input type="text" placeholder="Valor"
-            class="border rounded-md px-4 py-2 w-20 "
-            id="valor"
-        >
-
-        <input type="text" placeholder="Qtd"
-            class="border rounded-md px-4 py-2 w-16"
-            id="quantidade"
-        >
-
-        <button class="bg-blue-500 text-white px-4 py-2 rounded "
-        onclick="adicionarProduto()"
-        >
-            adicionar
-        </button>
-
-    </div>
-
+    <div class="bg-[#111827]/80 backdrop-blur-lg border border-gray-700 shadow-2xl rounded-2xl p-8 w-[650px]">
     
-
-
-    <div
-        id="lista"
-        class="flex flex-col gap-2"
-    >
-
+        <h1 class="text-3xl font-bold mb-6 text-center tracking-wide">
+            🧾 Inventário
+        </h1>
+    
+        <div class="flex gap-3 mb-6"> 
+            <input type="text" placeholder="Produto"
+                class="bg-[#1f2937] border border-gray-600 rounded-lg px-3 py-2 w-full focus:ring-2 focus:ring-cyan-400 outline-none"
+                id="produto"
+            >
+    
+            <input type="text" placeholder="R$"
+                class="bg-[#1f2937] border border-gray-600 rounded-lg px-3 py-2 w-24 focus:ring-2 focus:ring-cyan-400 outline-none"
+                id="valor"
+            >
+    
+            <input type="text" placeholder="Qtd"
+                class="bg-[#1f2937] border border-gray-600 rounded-lg px-3 py-2 w-20 focus:ring-2 focus:ring-cyan-400 outline-none"
+                id="quantidade"
+            >
+    
+            <button
+            class="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-cyan-500/30"
+            onclick="adicionarProduto()"
+            >
+                ADD
+            </button>
+        </div>
+    
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead class="text-cyan-400 border-b border-gray-700">
+                    <tr>
+                        <th class="text-left py-3">Produto</th>
+                        <th class="text-left py-3">Valor</th>
+                        <th class="text-left py-3">Qtd</th>
+                    </tr>
+                </thead>
+    
+                <tbody class="divide-y divide-gray-700">
+                    <tr class="hover:bg-[#1f2937] transition">
+                        <td id="nproduto" class="py-3"></td>
+                        <td id="vproduto" class="py-3"></td>
+                        <td id="qproduto" class="py-3"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
     </div>
-
-
-</body>
+    
+    </body>
 </html>
 
 
